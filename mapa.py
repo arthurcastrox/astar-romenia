@@ -33,9 +33,10 @@ mapa_romenia = {
     'Neamt': [('Iasi', 87)]
     }
 
+
 # _ _ _ _ _ PASSO 2: a heurística como outro dicionário _ _ _ _ _
 # Chave = cidade, Valor = distância em linha reta (km) daquela cidade até Bucareste
-hueuristica_bucareste = {
+heuristica_bucareste = {
     'Arad': 366, 'Bucareste': 0, 'Craiova': 160, 'Drobeta': 242, 'Eforie': 161,
     'Fagaras': 176, 'Girgiu': 77, 'Hirsova': 151, 'Iasi': 226, 'Lugo': 244,
     'Mehadia': 241, 'Neamt': 234, 'oradea': 380, 'Pitesti': 100,
