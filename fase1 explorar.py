@@ -9,3 +9,9 @@ from mapa import mapa_romenia, heuristica_bucareste
  
 print('Quantidade de cidades no mapa:', len(mapa_romenia))
 print('Quantidade de valores de h(n):', len(heuristica_bucareste))
+
+# PASSO 3: olahr o valor guardado em uma chave
+vizinhos_arad = mapa_romenia['Arad']
+print()
+print('Vizinhos de Arad:', vizinhos_arad)
+print('Tipo do valor:', type(vizinhos_arad))
