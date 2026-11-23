@@ -23,7 +23,7 @@ mapa_romenia = {
     'Rimnicu Vilcea': [('Sibiu', 80), ('Craiova', 146), ('Pitesti', 97)],
     'Fagaras': [('Sibiu', 99), ('Bucareste', 211)],
     'Pitesti': [('Rimnicu Vilcea', 97), ('Craiova', 138), ('Bucareste', 101)],
-    'Bucareste': [('Fagaras', 211), ('Pitesti', 101), ('Giurgiu', 90)],
+    'Bucareste': [('Fagaras', 211), ('Pitesti', 101), ('Giurgiu', 90), ('Urziceni', 85)],
     'Giurgiu': [('Bucareste', 90)],
     'Urziceni': [('Bucareste', 85), ('Hirsova', 98), ('Vaslui', 142)],
     'Hirsova': [('Urziceni', 98), ('Eforie', 86)],
@@ -38,7 +38,7 @@ mapa_romenia = {
 # Chave = cidade, Valor = distância em linha reta (km) daquela cidade até Bucareste
 heuristica_bucareste = {
     'Arad': 366, 'Bucareste': 0, 'Craiova': 160, 'Drobeta': 242, 'Eforie': 161,
-    'Fagaras': 176, 'Girgiu': 77, 'Hirsova': 151, 'Iasi': 226, 'Lugo': 244,
+    'Fagaras': 176, 'Giurgiu': 77, 'Hirsova': 151, 'Iasi': 226, 'Lugo': 244,
     'Mehadia': 241, 'Neamt': 234, 'Oradea': 380, 'Pitesti': 100,
     'Rimnicu Vilcea': 193, 'Sibiu': 253, 'Timisoara': 329, 'Urziceni': 80, 
     'Vaslui': 199, 'Zerind': 374,

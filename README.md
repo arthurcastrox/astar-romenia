@@ -1,4 +1,3 @@
-# astar-romeniaimplemetação do algoritmo A*
 # A* na Romênia
 
 Implementação didática do algoritmo de busca **A\*** (A-estrela) em Python puro, aplicada ao clássico problema do mapa rodoviário da Romênia: encontrar o menor caminho entre uma cidade de origem e **Bucareste**.
@@ -32,6 +31,23 @@ A cada passo, o A\* expande a cidade com **menor `f`** na fronteira. Como a heur
 | `fase4_expandir.py` | 4 | Transforma a expansão em função (`expandir`) e repete três rodadas manualmente, mostrando fronteira e explorados. |
 | `fase5_busca.py` | 5 | Junta tudo em um laço `while` e devolve o caminho de Arad a Bucareste. |
 | `a_estrela.py` | 6 | **Programa completo**: busca A\* parametrizada, com rastro passo a passo, verificação do resultado e testes com outras origens. |
+| `tests/test_a_estrela.py` | - | Suíte de 20 testes automatizados (`unittest`), incluindo comparação com Dijkstra. |
+| `docs/` | - | Artefatos de engenharia de software: requisitos, casos de uso, diagramas e plano de testes. |
+
+## Documentação de engenharia de software
+
+Os artefatos do projeto estão em [`docs/`](docs/README.md):
+
+| Artefato | Arquivo |
+|----------|---------|
+| Requisitos (RF, RNF, regras de negócio) | [docs/01-requisitos.md](docs/01-requisitos.md) |
+| Casos de uso (diagrama e especificação) | [docs/02-casos-de-uso.md](docs/02-casos-de-uso.md) |
+| Diagramas: grafo, componentes, classes, sequência, atividades e árvore de busca | [docs/03-modelagem.md](docs/03-modelagem.md) |
+| Plano de testes e rastreabilidade | [docs/04-plano-de-testes.md](docs/04-plano-de-testes.md) |
+
+Árvore de busca de Arad a Bucareste (os nós azuis foram expandidos, na ordem indicada):
+
+![Árvore de busca](docs/img/3-6-arvore-de-busca-arad-bucareste.png)
 
 ## Representação dos dados
 
@@ -40,7 +56,7 @@ A cada passo, o A\* expande a cidade com **menor `f`** na fronteira. Como a heur
 - **Nó da busca:** tupla `(f, g, cidade, caminho)`. O `f` fica na posição 0 porque é por ele que a fronteira é ordenada.
 - **Fronteira:** lista ordenada por `f`. **Explorados:** conjunto (`set`) de cidades já expandidas.
 
-O mapa tem 20 cidades e 22 estradas.
+O mapa tem 20 cidades e 23 estradas (bidirecionais).
 
 ## Requisitos
 
@@ -62,6 +78,9 @@ python fase2_caminhos.py
 python fase3_fronteira.py
 python fase4_expandir.py
 python fase5_busca.py
+
+# testes automatizados
+python -m unittest discover -s tests -v
 ```
 
 > Execute os scripts de dentro da pasta do projeto, para que o `from mapa import ...` funcione.
